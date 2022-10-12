@@ -1,2 +1,7 @@
 /target
 /Cargo.lock
+
+# Generated sources:
+/src/compact_formats.rs
+/src/darkside.rs
+/src/service.rs
