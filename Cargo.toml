@@ -1,5 +1,5 @@
 [package]
-name = "zcash_lightwallet_client"
+name = "zcash_lightwallet_proto"
 version = "0.1.0"
 edition = "2021"
 
