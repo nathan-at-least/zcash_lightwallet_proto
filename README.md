@@ -4,7 +4,7 @@ A thin-as-possible rust bindings wrapper for the Zcash [lightwalletd](https://gi
 
 :warning: ⚠ This is a proof-of-concept prototype and should not be used in production.
 
-This repository is a proof of concept at creating a minimal modular rust bindings crate for the Lightwalletd protocol. The [librustzcash](https://github.com/zcash/librustzcash/issues/585) project may integrate grpc bindings directly which would be better maintained and vetted for production use in the future, see [librustzcash issue #585]([200~https://github.com/zcash/librustzcash/issues/585).
+This repository is a proof of concept at creating a minimal modular rust bindings crate for the Lightwalletd protocol. The [librustzcash](https://github.com/zcash/librustzcash/issues/585) project may integrate grpc bindings directly which would be better maintained and vetted for production use in the future, see [librustzcash issue #585](https://github.com/zcash/librustzcash/issues/585).
 
 This crate depends on `protobuf-codegen-pure` which will be imminently superceded by `protobug-codegen` according to [the docs](https://docs.rs/protobuf-codegen-pure/latest/protobuf_codegen_pure/#version-2).
 
