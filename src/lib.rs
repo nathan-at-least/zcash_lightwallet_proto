@@ -1,5 +1,3 @@
 #![doc = include_str!("../README.md")]
 
-pub mod compact_formats;
-pub mod darkside;
-pub mod service;
+include!(concat!(env!("OUT_DIR"), "/generated-source/container.rs"));
