@@ -18,8 +18,8 @@ So a standard `cargo build` should work.
 
 The `.proto` files are imported directly from [lightwalletd](https://github.com/zcash/lightwalletd) as a git subtree within the `./subtree` directory. This design is intended to enable safe tracking of upstream changes by updating the subtree without other manual copying or editing of `.proto` files.
 
-The `build.rs` script uses `protobuf-codegen-pure` to generate rust mods, writing them into `./src`. These mod paths are in `.gitignore` following the principle that generated files should never be in revision control so that the revision history contains only human-meaningful source code.
+The `build.rs` script uses `protobuf-codegen-pure` to generate rust mods, writing them into `$OUT_DIR/generated-source/`. Additionally a `container.rs` source file is written with `pub mod ${MODNAME};` for each `.proto` generated rust mod.
 
-The `lib.rs` directly exports the generated modules for each `.proto` file, with no other code or modifications.
+The `lib.rs` directly `include!()`'s the `container.rs`, which pulls in each generated submod.
 
 Unfortunately API docs are not produced from the upstream `.proto` files with this current design. A nice improvement would be to ensure rust API docs are automatically generated from upstream `.proto` API documentation.
