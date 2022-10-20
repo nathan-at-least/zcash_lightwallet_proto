@@ -1,6 +1,9 @@
 [package]
 name = "zcash_lightwallet_proto"
 version = "0.1.0"
+description = "A thin-as-possible rust bindings wrapper for the Zcash lightwalletd gRPC protocol."
+license-file = "LICENSE"
+repository = "https://github.com/nathan-at-least/zcash_lightwallet_proto"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
